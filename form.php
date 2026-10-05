@@ -36,13 +36,15 @@
             </tr>
         </thead>
         <tbody>
+            // foreach take arry of students to give details of each student
             <?php foreach($student as $student){?>
               <tr>
                 <td> <?php echo $student ['student_id']; ?></td>
                 <td> <?php echo $student ['firstName']; ?></td>
                 <td> <?php echo $student ['lastName']; ?></td>
                 <td> <?php echo $student ['age']; ?></td>
-                <td><button>View</button><button>Edit</button><button>Delete</button></td>
+                <td><a href="view.php?id=<?php echo $student ['student_id']; ?>"><button>View</button></a>
+                <button>Edit</button><button>Delete</button></td>
               </tr> 
             <?php } ?>
         </tbody>

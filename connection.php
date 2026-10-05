@@ -9,6 +9,4 @@
     //test connection
     if(!$conn){
         die(mysqli_connect_error());
-    }else{
-        echo("connection successfull");
     }
