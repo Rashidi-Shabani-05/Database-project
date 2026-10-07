@@ -25,7 +25,7 @@
     <hr>
 
     <h2>list of registered student</h2>
-    <table>
+    <table border="2px">
         <thead>
             <tr>
                 <td>S/N</td>
@@ -36,7 +36,7 @@
             </tr>
         </thead>
         <tbody>
-            // foreach take arry of students to give details of each student
+            <!-- foreach take arry of students to give details of each student -->
             <?php foreach($student as $student){?>
               <tr>
                 <td> <?php echo $student ['student_id']; ?></td>
