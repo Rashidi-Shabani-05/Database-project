@@ -37,14 +37,17 @@
         </thead>
         <tbody>
             <!-- foreach take arry of students to give details of each student -->
-            <?php foreach($student as $student){?>
+            <?php 
+            $sn = 1;
+            foreach($student as $student){?>
               <tr>
-                <td> <?php echo $student ['student_id']; ?></td>
+                <td> <?php echo $sn++; ?></td>
                 <td> <?php echo $student ['firstName']; ?></td>
                 <td> <?php echo $student ['lastName']; ?></td>
                 <td> <?php echo $student ['age']; ?></td>
                 <td><a href="view.php?id=<?php echo $student ['student_id']; ?>"><button>View</button></a>
-                <button>Edit</button><button>Delete</button></td>
+                <a href="Edit.php?edit=<?php echo $student ['student_id']; ?>"><button>Edit</button></a>
+                <a href="process.php?del=<?php echo $student ['student_id']; ?>"><button>Delete</button></a></td>
               </tr> 
             <?php } ?>
         </tbody>
